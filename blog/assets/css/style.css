@@ -1,0 +1,560 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;300;400;500;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto Slab', serif;
+    background: #f0e6fcbd;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    color: #4a4a4a;
+    font-weight: 500;
+}
+
+/* =========================
+   AUTH FORMS (login/register)
+========================= */
+
+.form-title {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    font-size: 26px;
+    font-weight: 600;
+}
+
+.admin-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* промежуток между кнопками */
+}
+
+.admin-btn-half {
+    flex: 1; /* растягиваем на всю доступную половину */
+    text-align: center;
+    padding: 20px;
+    font-size: 16px;
+    border-radius: 20px;
+    background: #c79cff;
+    color: white;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.admin-btn-half:hover {
+    background: #b983ff;
+}
+
+.auth-form {
+    background: #ffffff;
+    max-width: 400px;
+    margin: 40px auto 80px;
+    padding: 35px;
+    border-radius: 18px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.06);
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.auth-form input {
+    width: 100%;
+    padding: 14px 16px;
+    border-radius: 10px;
+    border: 1px solid #e5e5e5;
+    font-size: 14px;
+        font-family: 'Roboto Slab', serif;
+
+    transition: 0.2s ease;
+    background: #fafafa;
+}
+
+.auth-form input:focus {
+    outline: none;
+    border-color: #BA8EF3;
+    background: #ffffff;
+    box-shadow: 0 0 0 3px rgba(214,51,132,0.08);
+}
+
+.auth-form button {
+    background: #BA8EF3;
+        font-family: 'Roboto Slab', serif;
+
+    color: white;
+    padding: 13px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: 0.2s ease;
+}
+
+.auth-form button:hover {
+    background: #bf8fff;
+    transform: translateY(-2px);
+}
+
+/* ===== HEADER ===== */
+.header {
+    background: #fff;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 18px 40px;
+    border-bottom: 1px solid #f1e6ec;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo a {
+    font-size: 28px;
+    color: #BA8EF3;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.nav {
+    display: flex;
+    gap: 14px;
+}
+
+.nav a {
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-size: 14px;
+    background: #f0e6fcbd;
+    color: #c294ff;
+    transition: 0.3s;
+}
+
+.nav a:hover {
+    background: #eddfff;
+}
+
+/* ===== BURGER MENU ===== */
+.burger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.burger span {
+    width: 24px;
+    height: 2px;
+    background: #BA8EF3;
+}
+
+/* ===== CONTAINER ===== */
+.container {
+    width: 92%;
+    max-width: 1000px;
+    margin: 50px auto;
+    flex: 1;
+}
+
+/* ===== SECTION TITLE ===== */
+.section-title {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 35px;
+    color: #BA8EF3;
+}
+
+/* =========================
+   ADMIN POST FORM
+========================= */
+
+.admin-form {
+    background: #ffffff;
+    max-width: 700px;
+    margin: 0 auto 60px;
+    padding: 35px;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.06);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.admin-form input,
+.admin-form textarea {
+    width: 100%;
+    padding: 14px 16px;
+    border-radius: 12px;
+    border: 1px solid #e3e3e3;
+    font-size: 15px;
+    font-family: inherit;
+    transition: 0.2s ease;
+}
+
+.admin-form input:focus,
+.admin-form textarea:focus {
+    outline: none;
+    border-color: #BA8EF3;
+    box-shadow: 0 0 0 3px rgba(234, 211, 255, 0.1);
+}
+
+.admin-form textarea {
+    min-height: 160px;
+    resize: vertical;
+}
+
+.admin-form button {
+    background: #BA8EF3;
+    color: white;
+    padding: 14px;
+    border: none;
+    border-radius: 14px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: 0.2s ease;
+}
+
+.admin-form button:hover {
+    background: #BA8EF3;
+    transform: translateY(-2px);
+}
+
+/* ===== POSTS ===== */
+/* ===== POST HEADER ===== */
+.post-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.post-author {
+    font-weight: 600;
+    color: #BA8EF3;
+    font-size: 18px;
+}
+
+.post-meta {
+    font-size: 12px;
+    color: #999;
+}
+
+.post-card,
+.post-card-single {
+    background: #fff;
+    padding: 25px;
+    border-radius: 20px;
+    margin-bottom: 30px;
+    box-shadow: 0 10px 30px rgba(214, 51, 132, 0.08);
+    transition: 0.3s;
+}
+
+.post-card:hover,
+.post-card-single:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(214, 51, 132, 0.15);
+}
+
+.post-card h3,
+.post-card-single .post-title {
+    margin-bottom: 15px;
+    font-size: 22px;
+    color: #BA8EF3;
+}
+
+.post-card img,
+.post-card-single .post-image {
+    max-width: 500px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+    display: block;
+    margin: 12px auto;
+}
+
+.post-card p,
+.post-card-single .post-content {
+    line-height: 1.6;
+    color: #555;
+}
+
+.post-card a,
+.post-card-single a {
+    color: #BA8EF3;
+    text-decoration: none;
+}
+
+/* ===== BUTTONS ===== */
+button,
+.btn,
+.like-btn,
+.comment-form-card button,
+.comment-form button {
+    border: none;
+    margin-top: 10px;
+    padding: 8px 18px;
+    border-radius: 25px;
+    background: #c79cff;
+    color: white;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+button:hover,
+.btn:hover,
+.like-btn:hover,
+.comment-form-card button:hover,
+.comment-form button:hover {
+    background: #b983ff;
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+/* ===== FORMS ===== */
+
+/* ===== AUTH FORMS ===== */
+.auth-form {
+    background: #fff;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 12px 35px rgba(214, 51, 132, 0.08);
+    max-width: 380px;
+    margin: 0 auto 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+/* ===== COMMENT FORM ===== */
+.comment-form {
+    background: #faf4ff;
+    padding: 20px;
+    border-radius: 12px;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.comment-form textarea {
+    padding: 12px;
+    border-radius: 12px;
+    border: 1px solid #f1d3de;
+    font-size: 14px;
+    background: #fffafd;
+    font-family: 'Roboto Slab', serif;
+}
+
+/* ===== PAGINATION ===== */
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+
+.pagination a {
+    text-decoration: none;
+    min-width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #ebdaff;
+    color: #BA8EF3;
+    font-weight: 600;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.pagination a.active {
+    background: #BA8EF3;
+    color: white;
+}
+
+.pagination .page-arrow {
+    border-radius: 20px;
+    padding: 8px 16px;
+}
+
+/* ===== COMMENTS ===== */
+#commentsList,
+.comment-form,
+.comment-form-card {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 10px;
+}
+
+.comment,
+.comment-card,
+.comment-form-card,
+#commentForm {
+    background: #faf4ff;
+    border-radius: 12px;
+    padding: 14px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    font-size: 14px;
+}
+
+#commentForm {
+    margin-top: 20px;
+}
+
+.comment-card p {
+    margin: 0;
+    font-size: 14px;
+    color: #555;
+    line-height: 1.6;
+}
+
+.comment-card:hover,
+.comment-form-card:hover {
+    transform: translateY(-3px);
+}
+
+.comment-card .comment-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #BA8EF3;
+    font-weight: 600;
+}
+
+.comment-card strong,
+.comment-form-card strong {
+    color: #BA8EF3;
+}
+
+.comment-login-msg {
+    font-style: italic;
+    color: #777;
+}
+
+/* ===== ADMIN ===== */
+.admin-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px 0;
+}
+
+.admin-card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    transition: transform 0.2s;
+}
+
+.admin-card:hover {
+    transform: translateY(-3px);
+}
+
+.admin-card h3 {
+    margin: 0 0 10px;
+    color: #BA8EF3;
+}
+
+.admin-card p {
+    color: #555;
+    font-size: 14px;
+}
+
+.admin-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.admin-actions a {
+    text-decoration: none;
+    background: #f0e6fcbd;
+    color: #BA8EF3;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.admin-actions a:hover {
+    background: #BA8EF3;
+    color: #fff;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    background: #fff;
+    padding: 45px 20px;
+    text-align: center;
+    border-top: 1px solid #f1e6ec;
+    color: #999;
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 768px) {
+    .header {
+        justify-content: space-between;
+        padding: 20px;
+    }
+
+    .burger {
+        display: flex;
+    }
+
+    .nav {
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        flex-direction: column;
+        background: white;
+        padding: 20px;
+        border-radius: 20px;
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+        display: none;
+        width: 180px;
+    }
+
+    .nav.active {
+        display: flex;
+    }
+
+    .container {
+        margin: 30px auto;
+    }
+
+    form {
+        width: 100%;
+        padding: 25px;
+    }
+
+    .post-container {
+        margin: 20px 15px;
+    }
+
+    .post-title {
+        font-size: 20px;
+    }
+
+    .post-content {
+        font-size: 14px;
+    }
+}
